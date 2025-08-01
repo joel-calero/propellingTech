@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: tpch_sf1
+    database: ANALYTICS
+    schema: tpch_sf1
+    tables:
+      - name: customer
+        columns:
+            - name: c_custkey
+              tests:
+                - not_null
+                - unique
+      - name: lineitem
+      - name: nation
+      - name: orders
+      - name: part
+      - name: partsupp
+      - name: region
+      - name: supplier
